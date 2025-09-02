@@ -72,6 +72,7 @@
                     list($nombre, $comentario) = explode("/separador/", $line);
                     echo "<strong>" . $nombre . ":</strong>";
                     echo "<p>" . $comentario . "</p>";
+                    echo "<hr>";
                 }
             }
             fclose($file);
