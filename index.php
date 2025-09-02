@@ -1,7 +1,15 @@
-<?php
-    include("head.php");
-?>
-        <h1 class="mb-4">Ciberseguridad: Secuestro de Sesiones PHP</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <title>Ciberseguridad</title>
+</head>
+<body class="bg-dark">
+    <div class="container mt-5 bg-light rounded p-5 col-lg-8">
+        <h1 class="mb-4">Seguridad: </h1>
         <p>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bullseye" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -55,6 +63,7 @@
             <li>4. Utilización de sesión por parte del atacante para acceder a información confidencial sin ser debidamente autenticado.</li>
             <li>5. Descripción de medidas de seguridad para prevenir el secuestro de sesiones.</li>
         </ul>
+        <a href="https://www.youtube.com/watch?v=w8pwVx_kIig" target="_blank">Fuente</a>
         <div class="row">
             <a class="btn btn-dark mx-auto col-md-4 mt-5" href="web_victima/index.php">Iniciar</a>
         </div>
