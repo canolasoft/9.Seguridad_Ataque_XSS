@@ -41,7 +41,7 @@
         </form>
 
         <?php
-        if (isset($_POST["comentario"])) {
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["comentario"])) {
             try {
                 $usr_name = $_POST["nombre"];
                 $comentario = $_POST["comentario"];
@@ -51,12 +51,7 @@
             } catch (mysqli_sql_exception $e) {
                 echo "Error en la base de datos: " . $e->getMessage();
             }
-        ?>
-            <h1>Nuevo comentario</h1>
-            <div id="comentarios">
-                <p><?php echo "<pre>" . print_r($_POST) . "</pre>"; ?></p>
-            </div>
-        <?php
+            header('Refresh:0');
         }
         ?>
 
