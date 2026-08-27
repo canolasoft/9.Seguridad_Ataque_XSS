@@ -29,7 +29,7 @@
         <p>
             Este sitio contiene una sección de comentarios y una vulnerabilidad crítica: no depura los datos ingresados.
             <br>
-            Esto permite a los atacantes inyectar código javascript malicioso en un comentario que luego será ejecutado por el sitio al mostrarlo.
+            Esto permite a los atacantes inyectar código javascript malicioso en un comentario que luego será ejecutado por el sitio al intentar mostrarlo.
         </p>
         <h3>Deja un comentario</h3>
         <form action="index.php" method="POST">
